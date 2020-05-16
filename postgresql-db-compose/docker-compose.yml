@@ -1,8 +1,10 @@
 version: '3.6'
 services:
-    posgresql:
+    postgresql:
         image: postgres:9
         ports:
             - 5432:5432
         volumes:
-            - /postgresql/data:/var/lib/postgresql/data
+            - db-data:/var/lib/postgresql/data
+volumes:
+    db-data: /postgresql/data
